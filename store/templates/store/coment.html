@@ -6,7 +6,7 @@
       <form method="post" action="{% url 'addComment' eachProduct.id %}" enctype="multipart/form-data">
         {% csrf_token %}
         <button class="btn btn-primary" type="submit" >Add comment</button>
-        <input type="text" name="product_id" value="{{eachProduct.comments}}">
+        <input type="hidden" name="product_id" value="{{eachProduct.id}}">
       {{ form.as_p }}
       </form>
     </div>
